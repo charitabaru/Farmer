@@ -12,7 +12,8 @@ export default {
           'transparent': 'transparent',
           'twitter': '#1DA1F2',
           'purple': '#8B46FF',
-          'customGreen': 'rgba(67, 160, 71, 1)'
+          'customGreen': 'rgba(67, 160, 71, 1)',
+          'cream':'rgba(197,191,175,255)'
       },
 
       fontSize: {
