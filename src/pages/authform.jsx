@@ -44,7 +44,7 @@ const AuthForm = ({ type }) => {
             icon="fi-rr-key"
           />
 
-          <button className="btn btn-dark mt-14 center" type="submit">
+          <button className="btn btn-dark bg-customGreen mt-14 center" type="submit">
             {type.replace("-", " ")}
           </button>
 

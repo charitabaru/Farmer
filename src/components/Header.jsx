@@ -6,13 +6,13 @@ const Header = () => {
   return (
     <>
       <nav className="navbar ">
-        <Link to="/" className="flex-none  w-10 mt-2 h-full">
+        <Link to="/" className="flex-none w-20 h-20 rounded-full overflow-hidden">
           <img src={logo} className="w-full h-auto" alt="Logo" />
         </Link>
 
         <div className="flex items-center gap-3 md:gap-6 ml-auto">
           <>
-            <Link className="btn-dark py-2" to="/signin">
+            <Link className="btn-dark bg-customGreen py-2" to="/signin">
               Sign In
             </Link>
 
