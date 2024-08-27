@@ -2,25 +2,30 @@ import Animalwrapper from "../common/page-animation";
 import { Link } from "react-router-dom";
 import { Toaster, toast } from "react-hot-toast";
 import InputBox from "../components/InputBox";
+import logo from "../imgs/logo.png";
 
 const AuthForm = ({ type }) => {
   return (
     <Animalwrapper keyvalue={type}>
-      <section className="h-cover flex justify-center items-center">
+      <section className="h-cover flex justify-center items-center bg-light-green">
         <Toaster />
-        <form className="w-[80%] max-w-[400px]">
-          <h1 className="text-4xl font-gelasio capitalize text-center mb-24">
-            {type == "sign-in" ? "welcome back" : "Join us today"}
+        <form className="w-[80%] max-w-[400px] bg-white p-8 rounded-lg shadow-md">
+          <img
+            src={logo}
+            alt="InstaFarm Logo"
+            className="w-24 h-24 mx-auto mb-6"
+          />
+          <h1 className="text-4xl font-gelasio capitalize text-center mb-12 text-dark-green">
+            {type == "sign-in" ? "Welcome Back" : "Join us today"}
           </h1>
-          {type != "sign-in" ? (
+
+          {type != "sign-in" && (
             <InputBox
               name="fullname"
               type="text"
               placeholder="Full Name"
               icon="fi-rr-user"
             />
-          ) : (
-            ""
           )}
 
           <InputBox
@@ -32,8 +37,8 @@ const AuthForm = ({ type }) => {
 
           <InputBox
             name="Phonenumber"
-            type="Phonenumber"
-            placeholder="Phonenumber"
+            type="tel"
+            placeholder="Phone Number"
             icon="fi-rr-phone-call"
           />
 
@@ -44,21 +49,30 @@ const AuthForm = ({ type }) => {
             icon="fi-rr-key"
           />
 
-          <button className="btn btn-dark bg-customGreen mt-14 center" type="submit">
+          <button
+            className="bg-dark-green text-white w-full mt-8 py-3 rounded-md font-semibold hover:bg-green-700 transition duration-300"
+            type="submit"
+          >
             {type.replace("-", " ")}
           </button>
 
           {type == "sign-in" ? (
-            <p className="mt-6 text-center text-dark-grey text-xl">
+            <p className="mt-6 text-center text-dark-grey text-sm">
               Don't have an account?
-              <Link to="/signup" className="text-black underline text-xl ml-1">
+              <Link
+                to="/signup"
+                className="text-dark-green font-semibold ml-1 hover:underline"
+              >
                 Join us today
               </Link>
             </p>
           ) : (
-            <p className="mt-6 text-center text-dark-grey text-xl">
+            <p className="mt-6 text-center text-dark-grey text-sm">
               Already a member?
-              <Link to="/signin" className="text-black underline text-xl ml-1">
+              <Link
+                to="/signin"
+                className="text-dark-green font-semibold ml-1 hover:underline"
+              >
                 Sign in here
               </Link>
             </p>
@@ -68,4 +82,5 @@ const AuthForm = ({ type }) => {
     </Animalwrapper>
   );
 };
+
 export default AuthForm;
