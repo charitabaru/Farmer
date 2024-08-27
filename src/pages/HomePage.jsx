@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import backgroundImage from "../imgs/farmer.png"; // Ensure this is the correct image path
+import backgroundImage from "../imgs/farmer.png"; 
 
 const HomePage = () => {
   return (
@@ -8,10 +8,10 @@ const HomePage = () => {
       className="hero-section relative bg-cover bg-center h-screen flex items-center justify-center px-4 md:px-8"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      {/* Dark Overlay */}
+      
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      {/* Content */}
+  
       <div className="relative text-center text-white max-w-2xl z-10">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           Connecting Farmers Directly to Retailers & Consumers
